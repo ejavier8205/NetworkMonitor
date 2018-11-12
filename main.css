@@ -1,76 +1,118 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 100;
 }
 
 body {
-    background-color: beige;
+    background-color: darkgrey;
 
 }
 
 h1 {
-
+    top: 10px;
     color:rgb(255, 255, 255);
-    font-size: 4vw;
+    font-size: 2vw;
     background-color: gray;
     text-indent: 30px;
+    position: relative;
+    display: block;
+    z-index: 1;
+    width: 90%;
+    border-radius: 50px;
+    padding: 10px;
+    left: 20px;
+    
+
 }
 
 div {
     background-color: rgb(194, 194, 194);
     width: 100%;
     height: 20px;
+    position: relative;
+    display: block;
+    z-index: 1;
+    padding: 10px;
+    margin: 10px;
 }
 
 
 table {
-    background-color:gray;
-    font-size: 20px;
-    margin: 20px;
-    width: fit-content;
+    top: 10px;
+    font-size: 100%;
+    width: 80%;
     word-spacing: 5px;
-    position: relative;
-    text-align: center;
+    text-align: left;
     padding: 25px;
-    left:60px;
+    height: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
     border-collapse: collapse;
+    position: relative;
+    display: block;
+    z-index: 1;
+    margin: 10px;
 
 
     
 }
+::-webkit-scrollbar {
+    display: none;
+    }
 
 tr {
-    border-top: 1px;
-    border-top-style: solid;
-    border-color: white;
-    border-bottom: 1px;
-    border-bottom-style: solid;
-    border-color: white;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+tr:hover{
+    background-color: rgb(112, 112, 112);
+
+
 }
 
 td, th {
     padding: 10px;
     padding-left: 30px;
-    padding-right: 30px
-
+    width: fit-content;
+    transition: all 0.3s ease;
 }
 
 th {
     background-color: rgb(194, 247, 133);
     color: rgb(128, 128, 128);
+
+}
+
+.customerHeader {
+    border-radius: 50px 0px 0px 50px;
+}
+
+.customerHeader:Hover {
+    background-color: rgb(112, 112, 112);
+    color: black;
     cursor: pointer;
 }
 
-.customer {
-    text-align: left;
+.connectionHeader {
+    border-radius: 0px 50px 50px 0px;
+    padding-right: 50px;
 }
 
-.customer {
+.stationHeader:hover {
+    background-color: rgb(112, 112, 112);
     color: black;
+    cursor: pointer;
+}
+.customer {
+    text-align: left;
+    border-radius: 50px 0px 0px 50px;
 }
 
 .station {
-    color: lightgray;
+    color: rgb(255, 255, 255);
 }
 
 .IP {
@@ -78,24 +120,25 @@ th {
 }
 
 .Date {
-    color: rgb(170, 170, 170);
+    color: rgb(207, 207, 207);
+    border-radius: 0px 50px 50px 0px;
 }
 
 
 
 
 #PWCS {
-    background-color: rgb(163, 206, 114);
+    color: rgb(255, 255, 0);
 
 }
 
 #AACPS {
 
-    background-color: rgb(136, 172, 95);
+    color: rgb(132, 0, 255);
 
 }
 
 #GHOST {
-    background-color: rgb(99, 124, 70);
+    color: rgb(0, 0, 255);
 
 }

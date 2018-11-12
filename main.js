@@ -5,7 +5,7 @@ function timedRefresh(timeoutPeriod) {
     
 }
 
-window.onload = timedRefresh(5000);
+window.onload = timedRefresh(30000);
 
 function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
