@@ -1,12 +1,12 @@
 
 
 function timedRefresh(timeoutPeriod) {
-    setTimeout("location.reload(true);",timeoutPeriod);
-    
+  setTimeout("location.reload(true);",timeoutPeriod);
 }
 
-window.onload = timedRefresh(30000);
+   window.onload = timedRefresh(1000);
 
+   
 function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("statusTable");
@@ -61,3 +61,6 @@ function sortTable(n) {
       }
     }
   }
+
+
+

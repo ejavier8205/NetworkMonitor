@@ -4,6 +4,7 @@ setlocal enabledelayedexpansion
 
 :start
 type top.html>StationsStatus.html
+type nul>statustable.txt
 set "CustomerID="
 
 
@@ -14,15 +15,20 @@ FOR /f "tokens=1,2,3,4 delims=," %%A in (status.txt) do (
     if /i "!CustomerIP!" EQU "192.168.1.1" Set "CustomerID=GHOST"
     if /i "!CustomerIP!" EQU "192.168.1.5" Set "CustomerID=AACPS"
 
-    echo ^<tr class="tableRows"^>>>StationsStatus.html
-    echo ^<td id="!CustomerID!" class="customer"^>!CustomerID!^</td^>>>StationsStatus.html 
-    echo ^<td id="StationID" class="station"^>%%A^</td^>>>StationsStatus.html
-    echo ^<td id="CustomerIP" class="IP"^>%%B^</td^>>>StationsStatus.html
-    echo ^<td id="DateID" class="Date"^>%%C^</td^>>>StationsStatus.html 
-    echo ^</tr^>>>StationsStatus.html
+    echo ^<tr class="tableRows"^>>>StatusTable.txt
 
+    echo ^<td id="!CustomerID!" class="customer"^>!CustomerID!^</td^>>>StatusTable.txt
+
+    echo ^<td id="StationID" class="station"^>%%A^</td^>>>StatusTable.txt
+
+    echo ^<td id="CustomerIP" class="IP"^>%%B^</td^>>>StatusTable.txt
+
+    echo ^<td id="DateID" class="Date"^>%%C^</td^>>>StatusTable.txt
+
+    echo ^</tr^>>>StatusTable.txt
     )
+type statustable.txt>>StationsStatus.html
 type bottom.html>>StationsStatus.html
-timeout /t 5 >nul 2>nul
+timeout /t 1 >nul 2>nul
 goto :start
 endlocal
