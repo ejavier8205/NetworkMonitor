@@ -1,30 +1,3 @@
-<DOCTYPE <!DOCTYPE html>
-        <script src="main.js"></script>
-<html>
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bench Status</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<meta http-equiv="refresh" content="10">-->
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="jquery-3.3.1.min.js"></script>
-    
-</head>
-<body>
-    <header>
-        <h1>Production Stations Network Monitor</h1>
-    </header>       
-<div></div>
-    <table id="statusTable" class=dataTable>
-        <tr>
-            <th class="CustomerHeader" onclick="sortTable(0)">Customer</th>
-            <th Class="StationHeader" onclick="sortTable(1)">Station ID</th>
-            <th Class="IPHeader">Customer IP</th>
-            <th class="ConnectionHeader">Last connection</th>
-        </tr>
-    
 <tr class="tableRows">
 <td id="PWCS" class="customer">PWCS</td>
 <td id="StationID" class="station">Rack-A</td>
@@ -80,18 +53,8 @@
 <td id="DateID" class="Date">10/25/2018</td>
 </tr>
 <tr class="tableRows">
-<<<<<<< HEAD
-<td id="AACPS" class="customer">AACPS</td> 
-<td id="StationID" class="station">NANA</td>
-=======
 <td id="AACPS" class="customer">AACPS</td>
 <td id="StationID" class="station">KKKKK</td>
->>>>>>> 4a6decebfbf60a7d53b5b20fade6774b1532cace
 <td id="CustomerIP" class="IP">192.168.1.5</td>
 <td id="DateID" class="Date">10/25/2018</td>
 </tr>
-
-    </table>
-</body>
-
-</html>
