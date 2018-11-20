@@ -95,7 +95,7 @@ th {
     cursor: pointer;
 }
 
-.connectionHeader {
+.TimeHeader {
     border-radius: 0px 50px 50px 0px;
     padding-right: 50px;
 }
@@ -120,10 +120,14 @@ th {
 
 .Date {
     color: rgb(207, 207, 207);
-    border-radius: 0px 50px 50px 0px;
+
 }
 
+.time {
+    color: rgb(174, 216, 110);
+    border-radius: 0px 50px 50px 0px;
 
+}
 
 
 #PWCS {

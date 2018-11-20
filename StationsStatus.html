@@ -1,5 +1,4 @@
 <DOCTYPE <!DOCTYPE html>
-        <script src="main.js"></script>
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
@@ -9,86 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<meta http-equiv="refresh" content="10">-->
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="jquery-3.3.1.min.js"></script>
-    
+    <script src="main.js"></script>
 </head>
 <body>
     <header>
         <h1>Production Stations Network Monitor</h1>
-    </header>       
+    </header> 
 <div></div>
+
     <table id="statusTable" class=dataTable>
         <tr>
             <th class="CustomerHeader" onclick="sortTable(0)">Customer</th>
             <th Class="StationHeader" onclick="sortTable(1)">Station ID</th>
             <th Class="IPHeader">Customer IP</th>
             <th class="ConnectionHeader">Last connection</th>
+            <th class="TimeHeader">Time</th>
         </tr>
     
 <tr class="tableRows">
-<td id="PWCS" class="customer">PWCS</td>
-<td id="StationID" class="station">Rack-A</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">10/25/2018</td>
+<td id="LAB" class="customer">LAB</td>
+<td id="StationID" class="station">Bench 1</td>
+<td id="CustomerIP" class="IP">192.168.2.1</td>
+<td id="DateID" class="Date">Tue 11/20/2018</td>
+<td id="TimeID" class="Time">11:21:13.35</td>
 </tr>
 <tr class="tableRows">
-<td id="GHOST" class="customer">GHOST</td>
-<td id="StationID" class="station">Rack-B</td>
-<td id="CustomerIP" class="IP">192.168.1.1</td>
-<td id="DateID" class="Date">10/25/2018</td>
-</tr>
-<tr class="tableRows">
-<td id="GHOST" class="customer">GHOST</td>
-<td id="StationID" class="station">Rack-D</td>
-<td id="CustomerIP" class="IP">192.168.1.1</td>
-<td id="DateID" class="Date">10/25/2018</td>
-</tr>
-<tr class="tableRows">
-<td id="PWCS" class="customer">PWCS</td>
-<td id="StationID" class="station">Bench-E</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">10/25/2018</td>
-</tr>
-<tr class="tableRows">
-<td id="AACPS" class="customer">AACPS</td>
-<td id="StationID" class="station">Rack-C</td>
-<td id="CustomerIP" class="IP">192.168.1.5</td>
-<td id="DateID" class="Date">10/25/2018</td>
-</tr>
-<tr class="tableRows">
-<td id="PWCS" class="customer">PWCS</td>
-<td id="StationID" class="station">Rack-G</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">10/25/2018</td>
-</tr>
-<tr class="tableRows">
-<td id="AACPS" class="customer">AACPS</td>
-<td id="StationID" class="station">Bench-F</td>
-<td id="CustomerIP" class="IP">192.168.1.5</td>
-<td id="DateID" class="Date">10/25/2018</td>
-</tr>
-<tr class="tableRows">
-<td id="GHOST" class="customer">GHOST</td>
-<td id="StationID" class="station">Rack-H</td>
-<td id="CustomerIP" class="IP">192.168.1.1</td>
-<td id="DateID" class="Date">10/25/2018</td>
-</tr>
-<tr class="tableRows">
-<td id="PWCS" class="customer">PWCS</td>
-<td id="StationID" class="station">HELLO-L</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">10/25/2018</td>
-</tr>
-<tr class="tableRows">
-<<<<<<< HEAD
-<td id="AACPS" class="customer">AACPS</td> 
-<td id="StationID" class="station">NANA</td>
-=======
-<td id="AACPS" class="customer">AACPS</td>
-<td id="StationID" class="station">KKKKK</td>
->>>>>>> 4a6decebfbf60a7d53b5b20fade6774b1532cace
-<td id="CustomerIP" class="IP">192.168.1.5</td>
-<td id="DateID" class="Date">10/25/2018</td>
+<td id="Not Connected" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 2</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Tue 11/20/2018</td>
+<td id="TimeID" class="Time">11:21:13.53</td>
 </tr>
 
     </table>
