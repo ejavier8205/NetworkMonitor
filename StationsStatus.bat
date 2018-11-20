@@ -22,7 +22,6 @@ ECHO UAC.ShellExecute "!batchPath!", "ELEV", "", "runas", 1 >> "%temp%\UAC.vbs"
 exit \B
 
 :gotPrivileges
-pause
 cd /d "%HomeDirectory%"
 
 
@@ -34,6 +33,7 @@ TITLE Stations Status
 
 type "%HomeDirectory%top.html">"%HomeDirectory%StationsStatus.html"
 type nul>"%HomeDirectory%StatusTable.txt"
+
 set "CustomerID="
 
 
