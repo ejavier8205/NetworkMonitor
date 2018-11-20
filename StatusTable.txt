@@ -1,14 +1,12 @@
 <tr class="tableRows">
-<td id="LAB" class="customer">LAB</td>
+<td id="ASG LAB" class="customer">ASG LAB</td>
 <td id="StationID" class="station">Bench 1</td>
 <td id="CustomerIP" class="IP">192.168.2.1</td>
 <td id="DateID" class="Date">Tue 11/20/2018</td>
-<td id="TimeID" class="Time">11:21:13.35</td>
+<td id="TimeID" class="Time">12:33:13.36</td>
 </tr>
 <tr class="tableRows">
 <td id="Not Connected" class="customer">Not Connected</td>
 <td id="StationID" class="station">Bench 2</td>
 <td id="CustomerIP" class="IP">Disconnected</td>
 <td id="DateID" class="Date">Tue 11/20/2018</td>
-<td id="TimeID" class="Time">11:21:13.53</td>
-</tr>
