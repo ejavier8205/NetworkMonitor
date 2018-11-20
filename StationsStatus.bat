@@ -22,11 +22,12 @@ ECHO UAC.ShellExecute "!batchPath!", "ELEV", "", "runas", 1 >> "%temp%\UAC.vbs"
 exit \B
 
 :gotPrivileges
-
-cd /d %HomeDirectory%
+pause
+cd /d "%HomeDirectory%"
 
 
 :start
+cls
 TITLE Stations Status
 
 

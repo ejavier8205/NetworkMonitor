@@ -22,9 +22,10 @@ exit \B
 
 :gotPrivileges
 
-cd /d %HomeDirectory%
+cd /d "%HomeDirectory%"
 
 :start
+cls
 title DataGrabber
 ::netsh interface set interface "Bench 1" disable
 ::netsh interface set interface "Bench 2" disable
