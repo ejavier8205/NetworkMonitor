@@ -1,0 +1,30 @@
+<<<<<<< HEAD
+=======
+<tr class="tableRows">
+<td id="ASG LAB" class="customer">ASG LAB</td>
+<td id="StationID" class="station">Bench 1</td>
+<td id="CustomerIP" class="IP">192.168.2.1</td>
+<td id="DateID" class="Date">Tue 11/20/2018</td>
+<td id="TimeID" class="Time">16:19:48.92</td>
+</tr>
+<tr class="tableRows">
+<td id="Not Connected" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 2</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Tue 11/20/2018</td>
+<td id="TimeID" class="Time">16:19:49.18</td>
+</tr>
+<tr class="tableRows">
+<td id="Not Connected" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 3</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Tue 11/20/2018</td>
+<td id="TimeID" class="Time">16:19:49.45</td>
+</tr>
+<tr class="tableRows">
+<td id="Not Connected" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 4</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Tue 11/20/2018</td>
+<td id="TimeID" class="Time">16:19:49.74</td>
+>>>>>>> 318896306da742cea1d19e130e4a14180ecacc9b
