@@ -1,5 +1,5 @@
 @echo off
-TITLE stations status
+
 setlocal EnableDelayedExpansion
 
 :checkPrivileges
@@ -27,6 +27,7 @@ exit \B
 
 
 :start
+TITLE Stations Status
 type top.html>StationsStatus.html
 type nul>statustable.txt
 set "CustomerID="

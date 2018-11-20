@@ -25,6 +25,7 @@ exit \B
 @cd /d "%~dp0"
 
 :start
+title DataGrabber
 ::netsh interface set interface "Bench 1" disable
 ::netsh interface set interface "Bench 2" disable
 ::netsh interface set interface "Bench 3" disable
@@ -46,73 +47,44 @@ timeout /t 5 >nul 2>nul
 
 Set "NoConnection=Disconnected"
 set "NodeID=Node1-Status.txt"
+Set StationID=0
+set TotalStations=0
+type nul>!NodeID!
 
 
-::STATION-1
+
+::GET GATEWAY
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-Set "StationID=Bench 1"
+:NextStation
+if '%TotalStations%' GTR 6 goto :start
+Set /a StationID+=1
+Set "StationName=Bench"
 set count=0
 :GetGateway
 set /a count+=1
 if '%count%' GTR 5 goto :NoGateway
-netsh interface ip show addresses name="!StationID!" | find /i "Default Gateway" >nul 2>nul && goto :SaveGateway || goto :GetGateway
+netsh interface ip show addresses name="!StationName! !StationID!" | find /i "Default Gateway" >nul 2>nul && goto :SaveGateway || goto :GetGateway
 
 
 :SaveGateway
-netsh interface ip show addresses name="!StationID!" | find /i "Default Gateway">>temp.txt
+netsh interface ip show addresses name="!StationName! !StationID!" | find /i "Default Gateway">>temp.txt
 for /f "tokens=2 delims=:" %%a in  (temp.txt) do (
     set "gateway=%%a"
     set "gateway=!gateway: =!"
 )
 set "MyTime=%time%"
 Set "MyTime=!MyTime: =!"
-echo !StationID!,!Gateway!,%date%,!Mytime!>!NodeID!
-goto :Station2
+echo !StationName! !StationID!,!Gateway!,%date%,!Mytime!>>!NodeID!
+set /a TotalStations+=1
+goto :NextStation
 
 :NoGateway
 set "MyTime=%time%"
 Set "MyTime=!MyTime: =!"
-echo !StationID!,!NoConnection!,%date%,!Mytime!>!NodeID!
-goto :Station2
+echo !StationName! !StationID!,!NoConnection!,%date%,!Mytime!>>!NodeID!
+set /a TotalStations+=1
+goto :NextStation
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-::STATION-2
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:Station2
-Set "StationID=Bench 2"
-set count=0
-:GetGateway
-set /a count+=1
-if '%count%' GTR 5 goto :NoGateway
-netsh interface ip show addresses name="!StationID!" | find /i "Default Gateway" >nul 2>nul && goto :SaveGateway || goto :GetGateway
-
-
-:SaveGateway
-netsh interface ip show addresses name="!StationID!" | find /i "Default Gateway">>temp.txt
-for /f "tokens=2 delims=:" %%a in  (temp.txt) do (
-    set "gateway=%%a"
-    set "gateway=!gateway: =!"
-)
-set "MyTime=%time%"
-Set "MyTime=!MyTime: =!"
-echo !StationID!,!Gateway!,%date%,!Mytime!>>!NodeID!
-goto :Station3
-
-:NoGateway
-set "MyTime=%time%"
-Set "MyTime=!MyTime: =!"
-echo !StationID!,!NoConnection!,%date%,!Mytime!>>!NodeID!
-goto :Station3
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-:Station3
-goto :start
-
-
-
-
 
 
 endlocal
