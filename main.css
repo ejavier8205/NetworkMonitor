@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: darkgrey;
+    background-color: rgb(51, 49, 49);
 
 }
 
@@ -27,17 +27,19 @@ h1 {
 
 }
 
-div {
-    background-color: rgb(194, 194, 194);
-    width: 100%;
-    height: 20px;
+
+#time {
+    top: 10px;
+    color:rgb(255, 255, 255);
+    font-size: 2vw;
+    text-indent: 30px;
     position: relative;
+    float: right;
     display: block;
     z-index: 1;
     padding: 10px;
-    margin: 10px;
+    right: 250px;
 }
-
 
 table {
     top: 10px;
@@ -81,7 +83,7 @@ td, th {
 
 th {
     background-color: rgb(194, 247, 133);
-    color: rgb(128, 128, 128);
+    color: rgb(66, 66, 66);
 
 }
 
@@ -108,6 +110,7 @@ th {
 .customer {
     text-align: left;
     border-radius: 50px 0px 0px 50px;
+    color: rgb(207, 207, 207);
 }
 
 .station {

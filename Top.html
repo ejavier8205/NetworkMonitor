@@ -10,11 +10,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body onload="setInterval('getCurrentTime()', 1000);">
     <header>
         <h1>Production Stations Network Monitor</h1>
-    </header> 
-<div></div>
+    </header>
+    <div id="time"></div>
 
     <table id="statusTable" class=dataTable>
         <tr>

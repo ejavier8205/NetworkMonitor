@@ -1,9 +1,48 @@
 
+function getCurrentTime()
+{
+	var myDate = new Date();
+	var mySecs = myDate.getSeconds();
+	var curHour = myDate.getHours();
+	var curMin = myDate.getMinutes();
+	var suffix = "AM";
 
+	if(mySecs < 10)
+		mySecs = "0" + mySecs;
+
+	if(curMin < 10)
+		curMin = "0" + curMin;
+
+	if(curHour == 12 && curMin >= 1)
+	{
+		suffix = "PM";
+	}
+	if(curHour == 24 && curMin >= 1)
+	{
+		curHour-= 12;
+		suffix = "AM";
+	}
+	if(curHour > 12)
+	{
+		curHour-= 12;
+		suffix = "PM";
+	}
+
+	var time = curHour + ":" + curMin + ":" + mySecs + " " + suffix;
+	document.getElementById('time').innerHTML=(time);
+
+
+		if(time == curHour + ":" + curMin + ":" + "30" + " " + suffix) //Change this to whatever time you want
+			location.reload();
+
+}
+
+/**
 function timedRefresh(timeoutPeriod) {
     setTimeout("location.reload(true);",timeoutPeriod);
     
 }
+**/
 
 window.onload = timedRefresh(60000);
 

@@ -27,28 +27,24 @@ cd /d "%HomeDirectory%"
 :start
 cls
 title DataGrabber
-::netsh interface set interface "Bench 1" disable
-::netsh interface set interface "Bench 2" disable
-::netsh interface set interface "Bench 3" disable
-::netsh interface set interface "Bench 4" disable
-::netsh interface set interface "Bench 5" disable
-::netsh interface set interface "Bench 6" disable
-
-::timeout /t 3 >nul 2>nul
-
-::netsh interface set interface "Bench 1" enable
-::netsh interface set interface "Bench 2" enable
-::netsh interface set interface "Bench 3" enable
-::netsh interface set interface "Bench 4" enable
-::netsh interface set interface "Bench 5" enable
-::netsh interface set interface "Bench 6" enable
-
-timeout /t 5 >nul 2>nul
+netsh interface set interface "Bench 1" disable
+netsh interface set interface "Bench 2" disable
+netsh interface set interface "Bench 3" disable
+netsh interface set interface "Bench 4" disable
+netsh interface set interface "Bench 5" disable
+netsh interface set interface "Bench 6" disable
 
 
+
+netsh interface set interface "Bench 1" enable
+netsh interface set interface "Bench 2" enable
+netsh interface set interface "Bench 3" enable
+netsh interface set interface "Bench 4" enable
+netsh interface set interface "Bench 5" enable
+netsh interface set interface "Bench 6" enable
+timeout /t 30 >nul 2>nul
 Set "NoConnection=Disconnected"
 set "NodeID=Node1-Status.txt"
-
 Set StationID=0
 set TotalStations=0
 type nul>"%HomeDirectory%!NodeID!"
@@ -56,7 +52,7 @@ type nul>"%HomeDirectory%!NodeID!"
 ::GET GATEWAY
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :NextStation
-if '%TotalStations%' GTR 6 goto :start
+if '%TotalStations%' GTR 6 goto :TheEnd
 Set /a StationID+=1
 Set "StationName=Bench"
 set count=0
@@ -84,7 +80,8 @@ Set "MyTime=!MyTime: =!"
 echo !StationName! !StationID!,!NoConnection!,%date%,!Mytime!>>"%HomeDirectory%!NodeID!"
 set /a TotalStations+=1
 goto :NextStation
+
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
+:TheEnd
+exit /b
 endlocal

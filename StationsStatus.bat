@@ -27,11 +27,11 @@ cd /d "%HomeDirectory%"
 
 :start
 cls
+
+call "%HomeDirectory%DataGrabber.bat"
 TITLE Stations Status
 
 
-
-type "%HomeDirectory%top.html">"%HomeDirectory%StationsStatus.html"
 type nul>"%HomeDirectory%StatusTable.txt"
 
 set "CustomerID="
@@ -46,7 +46,7 @@ FOR /f "tokens=1,2,3,4,5 delims=," %%A in ('TYPE "%HomeDirectory%Node1-status.tx
     if /i "!CustomerIP!" EQU "192.168.24.251" Set "CustomerID=GHOST"
     if /i "!CustomerIP!" EQU "192.168.0.1" Set "CustomerID=BALTIMORE CO."
     if /i "!CustomerIP!" EQU "10.255.248.1" Set "CustomerID=LOUDOUN CO."
-
+    if /i "!CustomerIP!" EQU "192.168.16.250" Set "CustomerID=ANNE ARUNDEL CO."		
     echo ^<tr class="tableRows"^>>>"%HomeDirectory%StatusTable.txt"
 
     echo ^<td id="!CustomerID!" class="customer"^>!CustomerID!^</td^>>>"%HomeDirectory%StatusTable.txt"
@@ -61,8 +61,23 @@ FOR /f "tokens=1,2,3,4,5 delims=," %%A in ('TYPE "%HomeDirectory%Node1-status.tx
 
     echo ^</tr^>>>"%HomeDirectory%StatusTable.txt"
     )
+
+:SendData
+set "CurrentTime=%time%"
+set "CurrentTime=!CurrentTime: =!"
+Set "CurrentTime=!CurrentTime:~6,-3!"
+echo !CurrentTime!
+
+if '!CurrentTime!' EQU '00' (
+type "%HomeDirectory%top.html">"%HomeDirectory%StationsStatus.html"
 type "%HomeDirectory%statustable.txt">>"%HomeDirectory%StationsStatus.html"
 type "%HomeDirectory%bottom.html">>"%HomeDirectory%StationsStatus.html"
-timeout /t 1 >nul 2>nul
+echo data sent
+goto :start 
+) else (
+    goto :SendData
+)
+
+
 goto :start
 endlocal
