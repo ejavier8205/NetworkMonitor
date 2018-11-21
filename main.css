@@ -138,13 +138,17 @@ th {
 
 }
 
-#AACPS {
+#AACPS{
 
-    color: rgb(132, 0, 255);
+    color: rgb(183, 107, 255);
 
 }
 
 #GHOST {
     color: rgb(0, 0, 255);
 
+}
+
+#DISCONNECTED {
+    color: RED;
 }

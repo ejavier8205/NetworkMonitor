@@ -1,42 +1,42 @@
 <tr class="tableRows">
-<td id="ANNE ARUNDEL CO." class="customer">ANNE ARUNDEL CO.</td>
+<td id="DISCONNECTED" class="customer">Not Connected</td>
 <td id="StationID" class="station">Bench 1</td>
-<td id="CustomerIP" class="IP">192.168.16.250</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
 <td id="DateID" class="Date">Wed 11/21/2018</td>
-<td id="TimeID" class="Time">15:16:39.37</td>
+<td id="TimeID" class="Time">15:37:38.36</td>
 </tr>
 <tr class="tableRows">
-<td id="ANNE ARUNDEL CO." class="customer">ANNE ARUNDEL CO.</td>
+<td id="AACPS" class="customer">ANNE ARUNDEL CO.</td>
 <td id="StationID" class="station">Bench 2</td>
 <td id="CustomerIP" class="IP">192.168.16.250</td>
 <td id="DateID" class="Date">Wed 11/21/2018</td>
-<td id="TimeID" class="Time">15:16:40.57</td>
+<td id="TimeID" class="Time">15:37:39.58</td>
 </tr>
 <tr class="tableRows">
-<td id="ANNE ARUNDEL CO." class="customer">ANNE ARUNDEL CO.</td>
+<td id="DISCONNECTED" class="customer">Not Connected</td>
 <td id="StationID" class="station">Bench 3</td>
-<td id="CustomerIP" class="IP">192.168.16.250</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
 <td id="DateID" class="Date">Wed 11/21/2018</td>
-<td id="TimeID" class="Time">15:16:41.76</td>
+<td id="TimeID" class="Time">15:37:39.83</td>
 </tr>
 <tr class="tableRows">
-<td id="ANNE ARUNDEL CO." class="customer">ANNE ARUNDEL CO.</td>
+<td id="AACPS" class="customer">ANNE ARUNDEL CO.</td>
 <td id="StationID" class="station">Bench 4</td>
 <td id="CustomerIP" class="IP">192.168.16.250</td>
 <td id="DateID" class="Date">Wed 11/21/2018</td>
-<td id="TimeID" class="Time">15:16:42.95</td>
+<td id="TimeID" class="Time">15:37:41.02</td>
 </tr>
 <tr class="tableRows">
-<td id="ANNE ARUNDEL CO." class="customer">ANNE ARUNDEL CO.</td>
+<td id="AACPS" class="customer">ANNE ARUNDEL CO.</td>
 <td id="StationID" class="station">Bench 5</td>
 <td id="CustomerIP" class="IP">192.168.16.250</td>
 <td id="DateID" class="Date">Wed 11/21/2018</td>
-<td id="TimeID" class="Time">15:16:44.12</td>
+<td id="TimeID" class="Time">15:37:42.24</td>
 </tr>
 <tr class="tableRows">
-<td id="ANNE ARUNDEL CO." class="customer">ANNE ARUNDEL CO.</td>
+<td id="AACPS" class="customer">ANNE ARUNDEL CO.</td>
 <td id="StationID" class="station">Bench 6</td>
 <td id="CustomerIP" class="IP">192.168.16.250</td>
 <td id="DateID" class="Date">Wed 11/21/2018</td>
-<td id="TimeID" class="Time">15:16:45.28</td>
+<td id="TimeID" class="Time">15:37:43.43</td>
 </tr>
