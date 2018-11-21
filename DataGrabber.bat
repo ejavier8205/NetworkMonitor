@@ -52,7 +52,7 @@ type nul>"%HomeDirectory%!NodeID!"
 ::GET GATEWAY
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :NextStation
-if '%TotalStations%' GTR 6 goto :TheEnd
+if %TotalStations% GTR 19 goto :TheEnd
 Set /a StationID+=1
 Set "StationName=Bench"
 set count=0

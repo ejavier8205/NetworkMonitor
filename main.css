@@ -23,22 +23,26 @@ h1 {
     border-radius: 50px;
     padding: 10px;
     left: 20px;
-    
+}
+
+.Production {
+    color: rgb(194, 194, 194);
+
 
 }
 
 
 #time {
-    top: 10px;
-    color:rgb(255, 255, 255);
-    font-size: 2vw;
+    color:rgb(221, 221, 221);
+    font-size: 3vw;
     text-indent: 30px;
-    position: relative;
+    position: absolute;
     float: right;
     display: block;
     z-index: 1;
-    padding: 10px;
     right: 250px;
+    height: fit-content;
+    width: fit-content;
 }
 
 table {
@@ -56,9 +60,6 @@ table {
     display: block;
     z-index: 1;
     margin: 10px;
-
-
-    
 }
 ::-webkit-scrollbar {
     display: none;
@@ -70,12 +71,19 @@ tr {
 }
 
 tr:hover{
-    background-color: rgb(112, 112, 112);
+    background-color: rgb(8, 8, 8);
+}
+
+td {
+    border-bottom: 1px solid;
+    border-color: rgb(82, 82, 82);
+    
+
 
 }
 
 td, th {
-    padding: 10px;
+    padding: 20px;
     padding-left: 30px;
     width: fit-content;
     transition: all 0.3s ease;
@@ -84,7 +92,6 @@ td, th {
 th {
     background-color: rgb(194, 247, 133);
     color: rgb(66, 66, 66);
-
 }
 
 .customerHeader {
