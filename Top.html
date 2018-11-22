@@ -1,5 +1,4 @@
 <DOCTYPE <!DOCTYPE html>
-        <script src="main.js"></script>
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
@@ -9,19 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<meta http-equiv="refresh" content="10">-->
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="jquery-3.3.1.min.js"></script>
-    
+    <script src="main.js"></script>
 </head>
-<body>
+<body onload="setInterval('getCurrentTime()', 1000);">
     <header>
-        <h1>Production Stations Network Monitor</h1>
-    </header>       
-<div></div>
+        <h1><a class="Production">Production</a> Stations Connection Status</h1>
+    </header>
+    <div id="time"></div>
+
     <table id="statusTable" class=dataTable>
         <tr>
             <th class="CustomerHeader" onclick="sortTable(0)">Customer</th>
             <th Class="StationHeader" onclick="sortTable(1)">Station ID</th>
             <th Class="IPHeader">Customer IP</th>
             <th class="ConnectionHeader">Last connection</th>
+            <th class="TimeHeader">Time</th>
         </tr>
     

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <tr class="tableRows">
 <td id="PWCS" class="customer">PWCS</td>
 <td id="StationID" class="station">Rack-A</td>
@@ -33,3 +34,145 @@
 <td id="StationID" class="station">Rack-G</td>
 <td id="CustomerIP" class="IP">192.168.8.1</td>
 <td id="DateID" class="Date">10/25/2018</td>
+=======
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 1</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:40.41</td>
+</tr>
+<tr class="tableRows">
+<td id="AACPS" class="customer">ANNE ARUNDEL CO.</td>
+<td id="StationID" class="station">Bench 2</td>
+<td id="CustomerIP" class="IP">192.168.16.250</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:44.31</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 3</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:44.61</td>
+</tr>
+<tr class="tableRows">
+<td id="AACPS" class="customer">ANNE ARUNDEL CO.</td>
+<td id="StationID" class="station">Bench 4</td>
+<td id="CustomerIP" class="IP">192.168.16.250</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:47.36</td>
+</tr>
+<tr class="tableRows">
+<td id="AACPS" class="customer">ANNE ARUNDEL CO.</td>
+<td id="StationID" class="station">Bench 5</td>
+<td id="CustomerIP" class="IP">192.168.16.250</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:50.13</td>
+</tr>
+<tr class="tableRows">
+<td id="AACPS" class="customer">ANNE ARUNDEL CO.</td>
+<td id="StationID" class="station">Bench 6</td>
+<td id="CustomerIP" class="IP">192.168.16.250</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:53.70</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 7</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:55.24</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 8</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:55.53</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 9</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:55.83</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 10</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:56.83</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 11</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:57.10</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 12</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:57.39</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 13</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:57.67</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 14</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:58.89</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 15</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:00:59.92</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 16</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:01:00.22</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 17</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:01:01.94</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 18</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:01:02.22</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 19</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:01:03.99</td>
+</tr>
+<tr class="tableRows">
+<td id="DISCONNECTED" class="customer">Not Connected</td>
+<td id="StationID" class="station">Bench 20</td>
+<td id="CustomerIP" class="IP">Disconnected</td>
+<td id="DateID" class="Date">Wed 11/21/2018</td>
+<td id="TimeID" class="Time">17:01:04.28</td>
+</tr>
+>>>>>>> 31dfca748647c0754306bedc8175d50a68d77283
