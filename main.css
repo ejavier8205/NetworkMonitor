@@ -17,12 +17,12 @@ h1 {
     background-color: gray;
     text-indent: 30px;
     position: relative;
-    display: block;
     z-index: 1;
     width: 90%;
     border-radius: 50px;
     padding: 10px;
     left: 20px;
+    margin-bottom: 20px;
 }
 
 .Production {
@@ -34,64 +34,71 @@ h1 {
 
 #time {
     color:rgb(221, 221, 221);
-    font-size: 3vw;
-    text-indent: 30px;
-    position: absolute;
+    font-size: 2vw;
+    position: relative;
     float: right;
     display: block;
-    z-index: 1;
-    right: 250px;
     height: fit-content;
     width: fit-content;
 }
 
 table {
-    top: 10px;
-    font-size: 100%;
-    width: 80%;
-    word-spacing: 5px;
-    text-align: left;
-    padding: 25px;
-    height: 100%;
-    overflow: scroll;
-    scroll-behavior: smooth;
+    float: left;
+	max-width:980px;
+	table-layout:fixed;
+    margin:auto;
     border-collapse: collapse;
-    position: relative;
-    display: block;
+    scroll-behavior: smooth;
     z-index: 1;
-    margin: 10px;
-}
-::-webkit-scrollbar {
-    display: none;
-    }
-
-tr {
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
+    padding: 10px;
+    margin-left: 20px;
+    overflow: hidden;
 }
 
-tr:hover{
-    background-color: rgb(8, 8, 8);
-}
 
-td {
-    border-bottom: 1px solid;
-    border-color: rgb(82, 82, 82);
+th, td {
+    padding:5px 10px;
     
-
-
+}
+thead {
+	background:#f9f9f9;
+	display:table;
+	width:100%;
+	width:calc(100% - 18px);
+}
+tbody {
+	height:300px;
+	overflow: auto;
+	overflow-x:hidden;
+	display:block;
+    width:100%;
+    font-size: 10px;
+}
+tbody tr {
+	display:table;
+	width:100%;
+	table-layout:fixed;
 }
 
-td, th {
-    padding: 20px;
-    padding-left: 30px;
-    width: fit-content;
-    transition: all 0.3s ease;
+tbody::-webkit-scrollbar {
+    width: 8px;
 }
 
-th {
-    background-color: rgb(194, 247, 133);
-    color: rgb(66, 66, 66);
+tbody.thin::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(100,100,100,0.4); 
 }
 
 .customerHeader {
