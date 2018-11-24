@@ -23,6 +23,7 @@ h1 {
     padding: 10px;
     left: 20px;
     margin-bottom: 20px;
+    min-width: 1000px;
 }
 
 .Production {
@@ -34,10 +35,9 @@ h1 {
 
 #time {
     color:rgb(221, 221, 221);
-    font-size: 2vw;
-    position: relative;
-    float: right;
-    display: block;
+    font-size: 2vw; 
+    position: relative; 
+    display: inline-block;
     height: fit-content;
     width: fit-content;
 }
@@ -46,17 +46,14 @@ h1 {
     background-image: url('/css/searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    width: 500PX;
-    font-size: 16px;
-    padding: 10px 20px 10px 40px;
+    width: 300PX;
+    font-size: 50%;
+    padding: 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
     border-radius: 50Px;
     cursor: pointer;
-    display: block;
-    float: left;
-    right: 30px;
-    margin-left: 30px;
+    display: inline-block;
+    margin-left: 10px;
   }
 
 table {

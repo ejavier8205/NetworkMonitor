@@ -68,7 +68,7 @@ set "CurrentTime=!CurrentTime: =!"
 Set "CurrentTime=!CurrentTime:~6,-3!"
 echo !CurrentTime!
 
-if '!CurrentTime!' EQU '0' (
+if '!CurrentTime!' EQU '00' (
 type "%HomeDirectory%top.html">"%HomeDirectory%StationsStatus.html"
 type "%HomeDirectory%statustable.txt">>"%HomeDirectory%StationsStatus.html"
 type "%HomeDirectory%bottom.html">>"%HomeDirectory%StationsStatus.html"
