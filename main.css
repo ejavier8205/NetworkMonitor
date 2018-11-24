@@ -42,9 +42,24 @@ h1 {
     width: fit-content;
 }
 
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 500PX;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    border-radius: 50Px;
+    left: 20px;
+    cursor: pointer;
+  }
+
 table {
     float: left;
-	max-width:980px;
+    max-width: 1000px;
+    min-width: 600px;
 	table-layout:fixed;
     margin:auto;
     border-collapse: collapse;
@@ -61,23 +76,28 @@ th, td {
     
 }
 thead {
+    border-radius: 50px;
 	background:#f9f9f9;
 	display:table;
 	width:100%;
 	width:calc(100% - 18px);
 }
 tbody {
-	height:300px;
+    height: 300px;
 	overflow: auto;
-	overflow-x:hidden;
+    overflow-x:hidden;
 	display:block;
     width:100%;
-    font-size: 10px;
+    font-size: 80%;
 }
 tbody tr {
 	display:table;
 	width:100%;
 	table-layout:fixed;
+}
+
+.tablerows:hover {
+    background-color: black;
 }
 
 tbody::-webkit-scrollbar {
@@ -102,11 +122,11 @@ tbody.thin::-webkit-scrollbar {
 }
 
 .customerHeader {
-    border-radius: 50px 0px 0px 50px;
+    border-radius: 50px 0px 0px 50px;   
 }
 
 .customerHeader:Hover {
-    background-color: rgb(112, 112, 112);
+        background-color: rgb(112, 112, 112);
     color: black;
     cursor: pointer;
 }
@@ -125,6 +145,7 @@ tbody.thin::-webkit-scrollbar {
     text-align: left;
     border-radius: 50px 0px 0px 50px;
     color: rgb(207, 207, 207);
+    font-size: 20px;
 }
 
 .station {
