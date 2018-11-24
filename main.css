@@ -48,18 +48,21 @@ h1 {
     background-repeat: no-repeat;
     width: 500PX;
     font-size: 16px;
-    padding: 12px 20px 12px 40px;
+    padding: 10px 20px 10px 40px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
     border-radius: 50Px;
-    left: 20px;
     cursor: pointer;
+    display: block;
+    float: left;
+    right: 30px;
+    margin-left: 30px;
   }
 
 table {
     float: left;
     max-width: 1000px;
-    min-width: 600px;
+    min-width:800px;
 	table-layout:fixed;
     margin:auto;
     border-collapse: collapse;
@@ -68,6 +71,7 @@ table {
     padding: 10px;
     margin-left: 20px;
     overflow: hidden;
+    display: block;
 }
 
 
@@ -125,6 +129,11 @@ tbody.thin::-webkit-scrollbar {
     border-radius: 50px 0px 0px 50px;   
 }
 
+.customerHeader, .customer {
+    width: 250px;
+    min-width: 250px;  
+}
+
 .customerHeader:Hover {
         background-color: rgb(112, 112, 112);
     color: black;
@@ -145,7 +154,8 @@ tbody.thin::-webkit-scrollbar {
     text-align: left;
     border-radius: 50px 0px 0px 50px;
     color: rgb(207, 207, 207);
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: bolder;
 }
 
 .station {
