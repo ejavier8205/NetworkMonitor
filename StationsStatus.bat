@@ -35,11 +35,12 @@ TITLE Stations Status
 type nul>"%HomeDirectory%StatusTable.txt"
 
 set "CustomerID="
-Set "RowID=Row"
+
 
 
 FOR /f "tokens=1,2,3,4,5 delims=," %%A in ('TYPE "%HomeDirectory%Node1-status.txt"') do (
     set "CustomerIP=%%B"
+    Set "RowID=Row"
     if /i "!CustomerIP!" EQU "192.168.2.1" Set "CustomerID=ASG LAB" && Set "CustomerAbbr=ASGLAB"
     if /i "!CustomerIP!" EQU "Disconnected" Set "CustomerID=Not Connected" && Set "CustomerAbbr=DISCONNECTED" && Set "RowID=DisconnectedRow"
     if /i "!CustomerIP!" EQU "192.168.8.1" Set "CustomerID=PRINCE WILLIAM CO." && Set "CustomerAbbr=PWCS"
@@ -68,7 +69,7 @@ set "CurrentTime=!CurrentTime: =!"
 Set "CurrentTime=!CurrentTime:~6,-3!"
 echo !CurrentTime!
 
-if '!CurrentTime!' EQU '0' (
+if '!CurrentTime!' EQU '00' (
 type "%HomeDirectory%top.html">"%HomeDirectory%StationsStatus.html"
 type "%HomeDirectory%statustable.txt">>"%HomeDirectory%StationsStatus.html"
 type "%HomeDirectory%bottom.html">>"%HomeDirectory%StationsStatus.html"
