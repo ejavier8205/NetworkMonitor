@@ -1,0 +1,6 @@
+"Node 1 Ethernet","Intel(R) Ethernet Connection (3) I218-LM","EC-8E-B5-2C-61-E2","Media disconnected"
+"Node 1 Wi-Fi","Intel(R) Dual Band Wireless-AC 7265","64-80-99-F6-66-F2","\Device\Tcpip_{ED3AEF00-9F37-4DD4-9B96-8E6309EB68BE}"
+"Node 1 Bluetooth Network Connection","Bluetooth Device (Personal Area Network)","64-80-99-F6-66-F6","Media disconnected"
+"Bench 2","Realtek USB GbE Family Controller","70-88-6B-83-72-06","\Device\Tcpip_{74FE5A1A-F86C-4CB4-8A3B-FF0244B2B9CE}"
+"Bench 3","Realtek USB GbE Family Controller #2","70-88-6B-83-75-23","\Device\Tcpip_{BC1CD036-2500-4AA3-9AC8-FBAC9A4DEBFE}"
+"Bench 1","Realtek USB GbE Family Controller #3","70-88-6B-83-77-D3","\Device\Tcpip_{11C51347-C2F6-4B88-9F03-25454075B9AA}"
