@@ -1,3 +1,0 @@
-Bench 1,Not Available,Not Available
-Bench 2,Wi-Fi,F0-D5-BF-07-84-E7
-Bench 3,Not Available,Not Available
