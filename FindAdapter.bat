@@ -72,8 +72,5 @@ for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\Data\%Comput
 
 )
 
-
-
-    echo adapters has been scanned
-    pause
 endlocal
+exit /b

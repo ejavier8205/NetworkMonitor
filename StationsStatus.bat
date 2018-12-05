@@ -35,9 +35,11 @@ type nul>"%HomeDirectory%StatusTable.txt"
 
 set "CustomerID="
 
+FOR /f  %%A in ('dir "%HomeDirectory%Nodes\AllNodesCompilation" /b /A:-D') do (
+    Set "NodeDataFile=%%A"
 
 
-FOR /f "tokens=1,2,3,4,5 delims=," %%A in ('TYPE "%HomeDirectory%Node1-status.txt"') do (
+FOR /f "tokens=1,2,3,4,5 delims=," %%A in ('TYPE "%HomeDirectory%Nodes\AllNodesCompilation\!NodeDataFile!"') do (
     set "CustomerIP=%%B"
     Set "RowID=Row"
     if /i "!CustomerIP!" EQU "192.168.2.1" Set "CustomerID=ASG LAB" && Set "CustomerAbbr=ASGLAB"
@@ -62,17 +64,25 @@ FOR /f "tokens=1,2,3,4,5 delims=," %%A in ('TYPE "%HomeDirectory%Node1-status.tx
     echo ^</tr^>>>"%HomeDirectory%StatusTable.txt"
     )
 
+)
+
+
+
+
+
+
 :SendData
-set "CurrentTime=%time%"
-set "CurrentTime=!CurrentTime: =!"
-Set "CurrentTime=!CurrentTime:~6,-3!"
-echo !CurrentTime!
+    set "CurrentTime=%time%"
+    set "CurrentTime=!CurrentTime: =!"
+    Set "CurrentTime=!CurrentTime:~6,-3!"
+    echo !CurrentTime!
+
 
 if '!CurrentTime!' EQU '00' (
-type "%HomeDirectory%top.html">"%HomeDirectory%StationsStatus.html"
-type "%HomeDirectory%statustable.txt">>"%HomeDirectory%StationsStatus.html"
-type "%HomeDirectory%bottom.html">>"%HomeDirectory%StationsStatus.html"
-echo data sent
+    type "%HomeDirectory%top.html">"%HomeDirectory%StationsStatus.html"
+    type "%HomeDirectory%statustable.txt">>"%HomeDirectory%StationsStatus.html"
+    type "%HomeDirectory%bottom.html">>"%HomeDirectory%StationsStatus.html"
+    echo data sent
 goto :start 
 ) else (
     goto :SendData
