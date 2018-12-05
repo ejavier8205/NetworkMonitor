@@ -27,12 +27,12 @@ cd /d "%HomeDirectory%"
 :start
 
 
-getmac /v /fo csv /nh>"%HomeDirectory%Nodes\%Computername% Connected Adapters.txt"
+getmac /v /fo csv /nh>"%HomeDirectory%Nodes\Data\%Computername% Connected Adapters.txt"
 
 type nul>"%HomeDirectory%Nodes\%computername% Active Connections.txt"
 
 
-for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\Node1 Adapters ID.txt"') do (
+for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\Data\%ComputerName% Adapters ID.txt"') do (
     Set MyAdaptersCount=0
     set NotFoundCount=0
     Set "AdapterName=%%a"
@@ -43,13 +43,13 @@ for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\Node1 Adapte
     Set AdapterDesc=!AdapterDesc:"=!
     Set AdapterMAC=!AdapterMAC:"=!
 
-    for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\%computername% Connected Adapters.txt"') do (
+    for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\Data\%computername% Connected Adapters.txt"') do (
         Set /a MyAdaptersCount+=1
     )
 
  
 
-    for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\%computername% Connected Adapters.txt"') do (
+    for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\Data\%computername% Connected Adapters.txt"') do (
         Set "MyAdapterName=%%a"
         Set "MyAdapterDesc=%%b"
         Set "MyAdapterMAC=%%c"
@@ -74,6 +74,6 @@ for /f "tokens=1,2,3 delims=," %%a in  ('TYPE "%HomeDirectory%Nodes\Node1 Adapte
 
 
 
-
+    echo adapters has been scanned
     pause
 endlocal

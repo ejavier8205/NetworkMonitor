@@ -28,7 +28,6 @@ cd /d "%HomeDirectory%"
 :start
 cls
 
-call "%HomeDirectory%DataGrabber.bat"
 TITLE Stations Status
 
 

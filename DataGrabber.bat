@@ -27,61 +27,89 @@ cd /d "%HomeDirectory%"
 :start
 cls
 title DataGrabber
-netsh interface set interface "Bench 1" disable
-netsh interface set interface "Bench 2" disable
-netsh interface set interface "Bench 3" disable
-netsh interface set interface "Bench 4" disable
-netsh interface set interface "Bench 5" disable
-netsh interface set interface "Bench 6" disable
+
+
+::  CHECK FOR NODE SET ADAPTERS 
+
+        if exist "%HomeDirectory%Nodes\Data\%ComputerName% Adapters ID.txt" (
+            goto :NodeDataFound
+        ) else (
+            echo.
+            echo        Adapters data source for Node has not been set...script will exit.
+            echo.
+            pause >nul 2>nul
+            exit
+
+        )
+
+:NodeDataFound
+        call "%HomeDirectory%FindAdapter.bat"
+
+
+        type nul>"%HomeDirectory%Nodes\status\%computername%-Status.txt"
+pause
+:: DISABLE AVAILABLE ADAPTERS
+echo    Disabling connected adapters...
+type "%HomeDirectory%Nodes\%computername% Active Connections.txt"
+        for /f "tokens=1,2 delims=," %%a in ('type "%HomeDirectory%Nodes\%computername% Active Connections.txt"') do (
+            set "SavedStationName=%%a"
+            Set "StationName=%%b"
+            echo !StationName! | findstr /i /v "Not Available" && netsh interface set interface "!StationName!" disable
+        )
+            
+
+::ENABLE AVAILABLE ADAPTERS
+echo    Enabling connected adapters...
+      for /f "tokens=1,2,3 delims=," %%a in ('type "%HomeDirectory%Nodes\%computername% Active Connections.txt"') do (
+            set "SavedStationName=%%a"
+            Set "StationName=%%b"
+            echo !StationName! | findstr /i /v "Not Available" && netsh interface set interface "!StationName!" enable
+        )
+
+::WAIT FOR 30 SECS TO OBTAIN IP AND GATEWAY
+echo    Waiting for adapters to obtain IP...
+        timeout /t 5 >nul 2>nul
 
 
 
-netsh interface set interface "Bench 1" enable
-netsh interface set interface "Bench 2" enable
-netsh interface set interface "Bench 3" enable
-netsh interface set interface "Bench 4" enable
-netsh interface set interface "Bench 5" enable
-netsh interface set interface "Bench 6" enable
-timeout /t 30 >nul 2>nul
-Set "NoConnection=Disconnected"
-set "NodeID=Node1-Status.txt"
-Set StationID=0
-set TotalStations=0
-type nul>"%HomeDirectory%!NodeID!"
+for /f "tokens=1,2,3 delims=," %%a in ('type "%HomeDirectory%Nodes\%computername% Active Connections.txt"') do (
 
-::GET GATEWAY
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:NextStation
-if %TotalStations% EQU 6 goto :TheEnd
-Set /a StationID+=1
-Set "StationName=Bench"
-set count=0
-:GetGateway
-set /a count+=1
-if '%count%' GTR 5 goto :NoGateway
-netsh interface ip show addresses name="!StationName! !StationID!" | find /i "Default Gateway" >nul 2>nul && goto :SaveGateway || goto :GetGateway
+    set "SavedStationName=%%a"
+    Set "StationName=%%b"
+    Set "StationMAC=%%c"
+    Set "NoConnection=Disconnected"
 
+            echo !StationName! | findstr /i /v "Not Available"
 
-:SaveGateway
-netsh interface ip show addresses name="!StationName! !StationID!" | find /i "Default Gateway">>"%HomeDirectory%temp.txt"
-for /f "tokens=2 delims=:" %%a in  ('TYPE "%HomeDirectory%temp.txt"') do (
-    set "gateway=%%a"
-    set "gateway=!gateway: =!"
+            if %errorlevel% equ 0 (
+                netsh interface ip show addresses name="!StationName!" | find /i "Default Gateway">"%Temp%\temp.txt"
+
+                for /f "tokens=2 delims=:" %%a in  ('TYPE "%Temp%\temp.txt"') do (
+                    set "gateway=%%a"
+                    set "gateway=!gateway: =!"
+                )
+
+                set "MyTime=%time%"
+                Set "MyTime=!MyTime: =!"
+                if not defined Gateway Set "Gateway=Disconnected"
+                echo !StationName!,!Gateway!,%date%,!Mytime!>>"%HomeDirectory%Nodes\status\%computername%-Status.txt"
+            )
+
 )
-set "MyTime=%time%"
-Set "MyTime=!MyTime: =!"
-echo !StationName! !StationID!,!Gateway!,%date%,!Mytime!>>"%HomeDirectory%!NodeID!"
-set /a TotalStations+=1
-goto :NextStation
 
-:NoGateway
-set "MyTime=%time%"
-Set "MyTime=!MyTime: =!"
-echo !StationName! !StationID!,!NoConnection!,%date%,!Mytime!>>"%HomeDirectory%!NodeID!"
-set /a TotalStations+=1
-goto :NextStation
+:SendData
+set "CurrentTime=%time%"
+set "CurrentTime=!CurrentTime: =!"
+Set "CurrentTime=!CurrentTime:~6,-3!"
+echo !CurrentTime!
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:TheEnd
-exit /b
+if '!CurrentTime!' EQU '5' (
+    xcopy "%HomeDirectory%Nodes\status\%computername%-Status.txt" "%HomeDirectory%Nodes\AllNodesCompilation\" /y
+    pause
+    echo data sent
+    goto :start 
+) else (
+    goto :SendData
+)
+
 endlocal
