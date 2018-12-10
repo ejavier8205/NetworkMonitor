@@ -39,7 +39,7 @@ function getdata() {
 
 		while (!feof($file)){   
 			$data = fgets($file);
-			echo "<tr Id=\"Row\" class=\"tableRows\"><td class=\"tableBody\">" . str_replace(',','</td><td>',$data) . '</td></tr>';
+			echo "<tr Id=\"Row\" class=\"tableRows\"><td>" . str_replace(',','</td><td>',$data) . '</td></tr>';
 		}
 
 	echo "    </tbody>\n";
