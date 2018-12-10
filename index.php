@@ -1,12 +1,72 @@
-<?phprequire_once("dbcontroller.php");$db_handle = new DBController();$pages = $db_handle->runQuery("SELECT * FROM pages");?><html>
-<head>
-<title>Load Dynamic Content using jQuery AJAX</title><script src="http://code.jquery.com/jquery-2.1.1.js"></script><style type="text/css" media="screen">	body{width:610;}	#menu{background: #D8F9D3;height: 40px;border-top: #F0F0F0 2px solid;}	#menu input[type="button"]{margin-left: 2px;padding: 0px 15px;height: 40px;border: 0px;background: #F0F0F0;}
-	#output{min-height:300px;border:#F0F0F0 1px solid;padding:15px;}
-</style><script type="text/javascript">function getPage(id) {	$('#output').html('<img src="LoaderIcon.gif" />');	jQuery.ajax({		url: "get_page.php",		data:'id='+id,		type: "POST",		success:function(data){$('#output').html(data);}	});}getPage(1);
-</script>
-</head>
-<body><?php if(!empty($pages)) {?>
-<div id="menu"><?php foreach($pages as $page) { ?><input type="button" value="<?php echo $page["title"]; ?>" onClick="getPage(<?php echo $page["id"]; ?>);" /><?php }?>	
-</div><?php } ?>	<div id="output"></div>
-</body>
-</html>
+<?php
+
+
+echo "<DOCTYPE <!DOCTYPE html>\n";
+echo "<html>\n";
+echo "<head>\n";
+echo "    <link href=\"https://fonts.googleapis.com/css?family=Noto+Sans\" rel=\"stylesheet\">\n";
+echo "    <meta charset=\"utf-8\" />\n";
+echo "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n";
+echo "    <title>Bench Status</title>\n";
+echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
+echo "    <!--<meta http-equiv=\"refresh\" content=\"10\">-->\n";
+echo "    <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"css/main.css\" />\n";
+echo "    <script src=\"js/main.js\"></script>\n";
+echo "    <script src=\"js/reloader.js\"></script>\n";
+echo "</head>\n";
+echo "<body onload=\"setInterval('getCurrentTime()', 1000);\">\n";
+echo "    <header onload=\"reloadData()\">\n";
+echo "        <h1><a class=\"Production\">Production</a> Stations Connection Status<input type=\"text\" id=\"myInput\" onkeyup=\"myFunction()\" placeholder=\"Search for customer...\" title=\"Type in a name\"><a id=\"time\"></a></h1>\n";
+echo "    </header>\n";
+
+
+
+
+function getdata() {
+	echo "<table id=\"statusTable\" class=dataTable>\n";
+	echo "        <thead>\n";
+	echo "        <tr>\n";
+	echo "            <th class=\"CustomerHeader\" onclick=\"sortTable(0)\">Customer</th>\n";
+	echo "            <th Class=\"StationHeader\" onclick=\"sortTable(1)\">Station ID</th>\n";
+	echo "            <th Class=\"IPHeader\">Customer IP</th>\n";
+	echo "            <th class=\"ConnectionHeader\">Last connection</th>\n";
+	echo "            <th class=\"TimeHeader\">Time</th>\n";
+	echo "        </tr>\n";
+	echo "    </thead>";
+
+	$file = fopen("Status.txt", "r") or die("Unable to open file!");
+	echo "        <tbody>\n";
+
+		while (!feof($file)){   
+			$data = fgets($file);
+			echo "<tr Id=\"Row\" class=\"tableRows\"><td class=\"tableBody\">" . str_replace(',','</td><td>',$data) . '</td></tr>';
+		}
+
+	echo "    </tbody>\n";
+	echo '</table>';
+	fclose($file);
+}
+
+getdata();
+
+echo "    <div onload=\"setdisconnected();\" class=\"sidepanel\">\n";
+echo "\n";
+echo "        <h2 class=\"sidePanelTitle\">Ghost imaging network</h2>\n";
+echo "\n";
+echo "        <div class=\"sidePanelContainer\">\n";
+echo "            <p class=\"sidePanelData\">Charles Co.</p>\n";
+echo "            <p class=\"sidePanelData\">Baltimore City</p>\n";
+echo "            <p class=\"sidePanelData\">St. Johns</p>\n";
+echo "            \n";
+echo "        </div>\n";
+echo "        <div class=\"imagecontainer\">\n";
+echo "                <img src=\"images/network.png\" alt=\"NetworkIcon\">\n";
+echo "        </div>\n";
+echo "        \n";
+echo "    </div>\n";
+echo "    \n";
+echo "</body>\n";
+echo "\n";
+echo "</html>";
+
+?>
