@@ -1,10 +1,30 @@
-Prince William Co.,Rack-A,192.168.8.1,10/25/2018
-Anne Arundel Co.,BENCH 3,192.168.1.1,10/25/2018
-Anne Arundel Co.,Rack-D,192.168.1.1,10/25/2018
-Anne Arundel Co.,Bench-E,192.168.8.1,10/25/2018
-Prince William Co.,Rack-C,192.168.1.5,10/25/2018
-Prince William Co.,Rack-G,192.168.8.1,10/25/2018
-Prince William Co.,Bench-F,192.168.1.5,10/25/2018
-Anne Arundel Co.,Rack-H,192.168.1.1,10/25/2018
-Anne Arundel Co.,Rack-L,192.168.8.1,10/25/2018
-Anne Arundel Co.,NAXA,192.168.1.5,10/25/2018
+Prince William Co.,Rack-A,192.168.8.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,BENCH 3,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-D,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Bench-E,192.168.8.1,10/25/2018,17:46:51.16
+Prince William Co.,Rack-C,192.168.1.5,10/25/2018,17:46:51.16
+Prince William Co.,Rack-G,192.168.8.1,10/25/2018,17:46:51.16
+Prince William Co.,Bench-F,192.168.1.5,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-H,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-L,192.168.8.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,NASA,192.168.1.5,10/25/2018,17:46:51.16
+Prince William Co.,Rack-A,192.168.8.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,BENCH 3,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-D,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Bench-E,192.168.8.1,10/25/2018,17:46:51.16
+Prince William Co.,Rack-C,192.168.1.5,10/25/2018,17:46:51.16
+Prince William Co.,Rack-G,192.168.8.1,10/25/2018,17:46:51.16
+Prince William Co.,Bench-F,192.168.1.5,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-H,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-L,192.168.8.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,NASA,192.168.1.5,10/25/2018,17:46:51.16
+Prince William Co.,Rack-A,192.168.8.1,10/25/2018,17:46:51.16
+Anne Arundel Coasdqdsvsd.,BENCH 3,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-D,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Bench-E,192.168.8.1,10/25/2018,17:46:51.16
+Prince William Co.,Rack-C,192.168.1.5,10/25/2018,17:46:51.16
+Prince William Co.,Rack-G,192.168.8.1,10/25/2018,17:46:51.16
+Prince William Co.,Bench-F,192.168.1.5,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-H,192.168.1.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,Rack-L,192.168.8.1,10/25/2018,17:46:51.16
+Anne Arundel Co.,NAPA,192.168.1.5,10/25/2018,17:46:51.16

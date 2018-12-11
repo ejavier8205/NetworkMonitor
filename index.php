@@ -1,6 +1,4 @@
 <?php
-
-
 echo "<DOCTYPE <!DOCTYPE html>\n";
 echo "<html>\n";
 echo "<head>\n";
@@ -18,34 +16,44 @@ echo "    <header onload=\"reloadData()\">\n";
 echo "        <h1><a class=\"Production\">Production</a> Stations Connection Status<input type=\"text\" id=\"myInput\" onkeyup=\"myFunction()\" placeholder=\"Search for customer...\" title=\"Type in a name\"><a id=\"time\"></a></h1>\n";
 echo "    </header>\n";
 
-getdata();
+
+
+
+echo "<table id=\"statusTable\" class=\"dataTable\">\n";
+echo "        <thead>\n";
+echo "        <tr>\n";
+echo "            <th class=\"CustomerHeader\" onclick=\"sortTable(0)\">Customer</th>\n";
+echo "            <th Class=\"StationHeader\" onclick=\"sortTable(1)\">Station ID</th>\n";
+echo "            <th Class=\"IPHeader\">Customer IP</th>\n";
+echo "            <th class=\"ConnectionHeader\">Last connection</th>\n";
+echo "            <th class=\"TimeHeader\">Time</th>\n";
+echo "        </tr>\n";
+echo "    </thead>";
+echo "        <tbody>\n";
 
 function getdata() {
-	echo "<table id=\"statusTable\" class=\"dataTable\">\n";
-	echo "        <thead>\n";
-	echo "        <tr>\n";
-	echo "            <th class=\"CustomerHeader\" onclick=\"sortTable(0)\">Customer</th>\n";
-	echo "            <th Class=\"StationHeader\" onclick=\"sortTable(1)\">Station ID</th>\n";
-	echo "            <th Class=\"IPHeader\">Customer IP</th>\n";
-	echo "            <th class=\"ConnectionHeader\">Last connection</th>\n";
-	echo "            <th class=\"TimeHeader\">Time</th>\n";
-	echo "        </tr>\n";
-	echo "    </thead>";
+	$file = fopen("Status.txt", "r") or die("<td>Unable to open file!</td>");
 
-	$file = fopen("Status.txt", "r") or die("Unable to open file!");
-	echo "        <tbody  class=\"tableBody\">\n";
 
 		while (!feof($file)){   
 			$data = fgets($file);
-			echo "<tr Id=\"Row\" class=\"tableRows\"><td>" . str_replace(',','</td><td>',$data) . '</td></tr>';
+			list($customer, $StationName, $ipAddress, $statusDate, $statusTime) = explode(",", $data);
+
+			if($customer == "Anne Arundel Co.") {
+				$customerID = "AACPS";
+			} else {
+				$customerID = "None";
+			}
+			echo "<tr Id=\"Row\" class=\"tableRows\"><td id=\"$customerID\" class=\"customer\">$customer</td><td class=\"station\">$StationName</td><td class=\"ip\">$ipAddress</td><td class=\"date\">$statusDate</td><td class=\"time\">$statusTime</td></tr>\n";
 		}
 
 	echo "    </tbody>\n";
-	echo "</table>\n";
 	fclose($file);
+	
 }
 
-
+getdata();
+echo "</table>\n";
 
 echo "    <div onload=\"setdisconnected();\" class=\"sidepanel\">\n";
 echo "\n";
@@ -66,5 +74,4 @@ echo "    \n";
 echo "</body>\n";
 echo "\n";
 echo "</html>";
-
 ?>
