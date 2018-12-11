@@ -55,7 +55,7 @@ function getdata() {
 getdata();
 echo "</table>\n";
 
-echo "    <div onload=\"setdisconnected();\" class=\"sidepanel\">\n";
+echo "    <div class=\"sidepanel\">\n";
 echo "\n";
 echo "        <h2 class=\"sidePanelTitle\">Ghost imaging network</h2>\n";
 echo "\n";
