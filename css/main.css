@@ -5,15 +5,12 @@
     font-weight: 100;
 }
 
-html {
-    overflow: hidden;
-}
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: rgb(114, 61, 128);
+  }
 
-body {
-    background-image: url("../images/background.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-}
 
 h1 {
     top: 10px;
