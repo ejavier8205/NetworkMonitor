@@ -47,12 +47,29 @@ function getdata() {
 			echo "<tr Id=\"Row\" class=\"tableRows\"><td id=\"$customerID\" class=\"customer\">$customer</td><td class=\"station\">$StationName</td><td class=\"ip\">$ipAddress</td><td class=\"date\">$statusDate</td><td class=\"time\">$statusTime</td></tr>\n";
 		}
 
-	echo "    </tbody>\n";
+	
 	fclose($file);
 	
 }
 
+
+function refreshTable() {
+ 
+	// (do the required processing...)
+		$minutes = date('i');
+		$refreshTime = 30;
+	if ($minutes == $refreshTime) {
+		getdata();
+	  // end the recursion
+	}
+
+}
+
+refreshTable();
+
 getdata();
+echo "    </tbody>\n";
+
 echo "</table>\n";
 
 echo "    <div class=\"sidepanel\">\n";

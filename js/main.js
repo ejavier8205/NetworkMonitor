@@ -51,7 +51,7 @@ function getCurrentTime()
 
 
 		if(time == curHour + ":" + curMin + ":" + "30" + " " + suffix) //Change this to whatever time you want
-      /** location.reload(); **/
+       /** location.reload();*/ 
       getdata();
 }
 
