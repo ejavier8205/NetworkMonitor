@@ -10,16 +10,18 @@ echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\
 echo "    <!--<meta http-equiv=\"refresh\" content=\"10\">-->\n";
 echo "    <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"css/main.css\" />\n";
 echo "    <script src=\"js/main.js\"></script>\n";
+echo "    <script src=\"scripts/jquery-3.3.1.js\"></script>\n";
+echo "    <script src=\"scripts/jquery.js\"></script>\n";
 echo "</head>\n";
 echo "<body onload=\"setInterval('getCurrentTime()', 1000);\">\n";
 echo "    <header onload=\"reloadData()\">\n";
 echo "        <h1><a class=\"Production\">Production</a> Stations Connection Status<input type=\"text\" id=\"myInput\" onkeyup=\"myFunction()\" placeholder=\"Search for customer...\" title=\"Type in a name\"><a id=\"time\"></a></h1>\n";
 echo "    </header>\n";
 
-
-
-
+echo "<div class=\"tableContainer\" id=\"container\"></div>\n";
+ 
 echo "<table id=\"statusTable\" class=\"dataTable\">\n";
+/**
 echo "        <thead>\n";
 echo "        <tr>\n";
 echo "            <th class=\"CustomerHeader\" onclick=\"sortTable(0)\">Customer</th>\n";
@@ -53,24 +55,15 @@ function getdata() {
 }
 
 
-function refreshTable() {
- 
-	// (do the required processing...)
-		$minutes = date('i');
-		$refreshTime = 30;
-	if ($minutes == $refreshTime) {
-		getdata();
-	  // end the recursion
-	}
-
-}
-
-refreshTable();
 
 getdata();
 echo "    </tbody>\n";
+*/
 
 echo "</table>\n";
+
+
+
 
 echo "    <div class=\"sidepanel\">\n";
 echo "\n";
