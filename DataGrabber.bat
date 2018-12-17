@@ -24,6 +24,10 @@ exit \B
 
 cd /d "%HomeDirectory%"
 
+
+Set "serverPath=\\192.168.2.68\Websites\Dashboard\NetworkMonitor\Nodes\AllNodesCompilation\"
+
+net use * "!serverPath!" DalyLab2017! /user:administrator /persistent:no
 :start
 cls
 title DataGrabber
@@ -103,7 +107,7 @@ Set "CurrentTime=!CurrentTime:~6,-3!"
 echo !CurrentTime!
 
 if '!CurrentTime!' EQU '15' (
-    xcopy "%HomeDirectory%Nodes\status\%computername%-Status.txt" "%HomeDirectory%Nodes\AllNodesCompilation\" /y
+    xcopy "%HomeDirectory%Nodes\status\%computername%-Status.txt" "!serverPath!" /y
     echo data sent
     goto :start 
 ) else (
