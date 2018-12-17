@@ -45,13 +45,13 @@ FOR /f "tokens=1,2,3,4,5 delims=," %%A in ('TYPE "%HomeDirectory%Nodes\AllNodesC
     set "CustomerIP=%%B"
     Set "CurrentDate=%%C"
     Set "CurrentTime=%%D"
-    if /i "!CustomerIP!" EQU "192.168.2.1" Set "CustomerID=ASG LAB" && Set "CustomerAbbr=ASGLAB"
+    if /i "!CustomerIP!" EQU "192.168.2.1" Set "CustomerID=ASG Lab" && Set "CustomerAbbr=ASGLAB"
     if /i "!CustomerIP!" EQU "Disconnected" Set "CustomerID=Not Connected" && Set "CustomerAbbr=DISCONNECTED" && Set "RowID=DisconnectedRow"
-    if /i "!CustomerIP!" EQU "192.168.8.1" Set "CustomerID=PRINCE WILLIAM CO." && Set "CustomerAbbr=PWCS"
-    if /i "!CustomerIP!" EQU "192.168.24.251" Set "CustomerID=GHOST" && Set "CustomerAbbr=GHOST"
-    if /i "!CustomerIP!" EQU "192.168.0.1" Set "CustomerID=BALTIMORE CO." && Set "CustomerAbbr=BOE-BCPS"
-    if /i "!CustomerIP!" EQU "10.255.248.1" Set "CustomerID=LOUDOUN CO." && Set "CustomerAbbr=LCPS"
-    if /i "!CustomerIP!" EQU "192.168.16.250" Set "CustomerID=ANNE ARUNDEL CO." && Set "CustomerAbbr=AACPS"		
+    if /i "!CustomerIP!" EQU "192.168.8.1" Set "CustomerID=Prince William Co." && Set "CustomerAbbr=PWCS"
+    if /i "!CustomerIP!" EQU "192.168.24.251" Set "CustomerID=Ghost" && Set "CustomerAbbr=GHOST"
+    if /i "!CustomerIP!" EQU "192.168.0.1" Set "CustomerID=Baltimore Co." && Set "CustomerAbbr=BOE-BCPS"
+    if /i "!CustomerIP!" EQU "10.255.248.1" Set "CustomerID=Loudoun Co." && Set "CustomerAbbr=LCPS"
+    if /i "!CustomerIP!" EQU "192.168.16.250" Set "CustomerID=Anne Arundel Co." && Set "CustomerAbbr=AACPS"		
 
     echo !CustomerID!,!StationName!,!CustomerIP!,!CurrentDate!,!CurrentTime!>>"%HomeDirectory%StatusTable.txt"
 
@@ -66,7 +66,7 @@ FOR /f "tokens=1,2,3,4,5 delims=," %%A in ('TYPE "%HomeDirectory%Nodes\AllNodesC
 
 :SendData
     set "CurrentTime=%time%"
-    set "CurrentTime=!CurrentTime: =!"
+    ::set "CurrentTime=!CurrentTime: =!"
     Set "CurrentTime=!CurrentTime:~6,-3!"
     echo !CurrentTime!
 

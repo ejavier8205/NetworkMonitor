@@ -41,8 +41,8 @@ echo "        <tbody>\n";
 			$data = fgets($file);
 			list($customer, $StationName, $ipAddress, $statusDate, $statusTime) = explode(",", $data);
 
-			if($customer == "Anne Arundel Co.") {
-				$customerID = "AACPS";
+			if($customer == "Prince William Co.") {
+				$customerID = "PWCS";
 			} else {
 				$customerID = "None";
 			}
