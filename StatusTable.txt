@@ -1,21 +1,3 @@
-<tr Id="Row" class="tableRows">
-<td id="PWCS" class="customer">PRINCE WILLIAM CO.</td>
-<td id="StationID" class="station">Bench 1</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">Wed 12/05/2018</td>
-<td id="TimeID" class="Time">17:46:51.16</td>
-</tr>
-<tr Id="Row" class="tableRows">
-<td id="PWCS" class="customer">PRINCE WILLIAM CO.</td>
-<td id="StationID" class="station">Bench 2</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">Wed 12/05/2018</td>
-<td id="TimeID" class="Time">17:46:51.16</td>
-</tr>
-<tr Id="Row" class="tableRows">
-<td id="PWCS" class="customer">PRINCE WILLIAM CO.</td>
-<td id="StationID" class="station">Bench 3</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">Wed 12/05/2018</td>
-<td id="TimeID" class="Time">17:46:51.16</td>
-</tr>
+PRINCE WILLIAM CO.,Bench 1,192.168.8.1,Wed 12/05/2018,17:47:51.14
+PRINCE WILLIAM CO.,Bench 2,192.168.8.1,Wed 12/05/2018,17:47:51.14
+PRINCE WILLIAM CO.,Bench 3,192.168.8.1,Wed 12/05/2018,17:47:51.14
