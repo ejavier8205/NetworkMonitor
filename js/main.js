@@ -50,10 +50,26 @@ function getCurrentTime()
 	document.getElementById('time').innerHTML=(time);
 
 
-		if(time == curHour + ":" + curMin + ":" + "30" + " " + suffix) //Change this to whatever time you want
+		if(time == curHour + ":" + curMin + ":" + "30" + " " + suffix) {//Change this to whatever time you want
        /** location.reload();*/ 
-      getdata();
-}
+       var url = "\\192.168.1.26\Prod\Quality Assurance\Tools\NetworkMonitor\images\network.png";
+              var img = new Image();
+              img.src = url;
+
+              img.onload = function()
+              {
+                // If the server is up, do this.
+                location.reload();
+              }
+
+              img.onerror = function()
+              {
+                // If the server is down, do that.
+              }
+        
+    
+  }
+} 
 
 /**
 function timedRefresh(timeoutPeriod) {
@@ -119,4 +135,3 @@ function sortTable(n) {
   }
 
 
-  

@@ -15,49 +15,10 @@
     <header onload="reloadData()">
         <h1><a class="Production">Production</a> Stations Connection Status<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for customer..." title="Type in a name"><a id="time"></a></h1>
     </header>
-    <div id="currentData">
-        <p>Loading Data...</p>
-     </div>
-    
-    <table id="statusTable" class=dataTable>
-        <thead>
-        <tr>
-            <th class="CustomerHeader" onclick="sortTable(0)">Customer</th>
-            <th Class="StationHeader" onclick="sortTable(1)">Station ID</th>
-            <th Class="IPHeader">Customer IP</th>
-            <th class="ConnectionHeader">Last connection</th>
-            <th class="TimeHeader">Time</th>
-        </tr>
-    </thead>
-    <?php include "index.php";?>
 
-        <tbody>
-    
-<tr Id="Row" class="tableRows">
-<td id="PWCS" class="customer">PRINCE WILLIAM CO.</td>
-<td id="StationID" class="station">Bench 1</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">Wed 12/05/2018</td>
-<td id="TimeID" class="Time">17:45:51.14</td>
-</tr>
-<tr Id="Row" class="tableRows">
-<td id="PWCS" class="customer">PRINCE WILLIAM CO.</td>
-<td id="StationID" class="station">Bench 2</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">Wed 12/05/2018</td>
-<td id="TimeID" class="Time">17:45:51.14</td>
-</tr>
-<tr Id="Row" class="tableRows">
-<td id="PWCS" class="customer">PRINCE WILLIAM CO.</td>
-<td id="StationID" class="station">Bench 3</td>
-<td id="CustomerIP" class="IP">192.168.8.1</td>
-<td id="DateID" class="Date">Wed 12/05/2018</td>
-<td id="TimeID" class="Time">17:45:51.14</td>
-</tr>
 
-    </tbody>
-    </table>
 
+    <script src="getData.php"></script>
 
 
 

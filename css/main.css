@@ -87,8 +87,6 @@ table {
     height:70%;
     margin-top: 100px;
     margin-bottom: 30px;
-
-
 }
 
 th, td {
@@ -278,14 +276,24 @@ tbody.thin::-webkit-scrollbar {
 
 
 .tableContainer {
-    display: inline-block;
-    width: 300px;
-    min-width: 150px;
-    position: fixed;
-	color: #fff;
-	background: linear-gradient( rgba(35, 165, 213, 0.527), rgba(35, 213, 171, 0.541));
-    margin: 20px;
+    float: left;
+    max-width: 800px;
+    min-width:800px;
+	table-layout:fixed;
+    border-collapse: collapse;
+    scroll-behavior: smooth;
+    z-index: 1;
+    padding: 10px;
+    margin-left: 20px;
+    overflow: hidden;
+    display:block;
+    background-color: rgba(66, 66, 66, 0.7);
     border-radius: 25px;
-    height: fit-content;
+    padding: 20px;
+    height:70%;
     margin-top: 100px;
+    margin-bottom: 30px;
 }
+
+
+ 
