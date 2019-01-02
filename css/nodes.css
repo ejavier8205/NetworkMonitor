@@ -1,7 +1,7 @@
-/** NODES CSS **/
 
+<style>
 .nodeHtml {
-    background-color: rgb(85, 35, 95);
+    background-color: rgb(66, 66, 66);
     font-family: 'Noto Sans', sans-serif;
     font-weight: 100;
     overflow: hidden;   
@@ -9,13 +9,13 @@
 
 .nodeTitle {
     top: 10px;
-    color:  rgb(146, 146, 146);
+    color: rgb(146, 197, 64);
     font-size: 7vw;
-    text-indent: 30px;
+    text-indent: 5px;
     display: inline-block;
     position: relative;
     z-index: 1;
-    border-radius: 50px;
+    border-radius: 25px;
     left: 10px;
     min-width: 1000px;
     letter-spacing: 5px;
@@ -23,9 +23,9 @@
 }
 
 #time {
-    font-size: 5vw;    
+    font-size: 3vw;    
     right: 50px;
-    color: rgba(199, 199, 199, 0.7);
+    color: rgba(177, 177, 177, 0.7);
     padding: 1px;
     position: fixed;
     position: absolute;
@@ -39,26 +39,28 @@
     margin: 10px;
     display: inline-block;
     background-color: rgb(26, 26, 26);
-    border-radius: 25px;
+    border-radius: 50px;
 }
 
 .stationName {
     font-size: 300%;
-    color: rgb(175, 64, 197);
+    color: rgb(146, 197, 64);
     text-align: center;
     font-weight: bolder;
     letter-spacing: 2px;
     word-spacing: 10px;
+    background-color: rgb(70, 69, 69);
 }
 
 .customerName {
     display: block;
     font-size: 200%;    
-    color: rgb(146, 146, 146);
+    color: rgb(37, 144, 139);
     letter-spacing: 2px;
     word-spacing: 10px;
     padding-left: 10px;
-    padding-right: 10px
+    padding-right: 10px;
+    text-align: center;
 }
 
 
@@ -67,3 +69,5 @@
    position: center;
    height: 80%;
 }
+
+</style>
