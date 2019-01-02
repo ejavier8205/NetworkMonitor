@@ -50,6 +50,7 @@
     letter-spacing: 2px;
     word-spacing: 10px;
     background-color: rgb(70, 69, 69);
+    border-radius: 10px;
 }
 
 .customerName {
