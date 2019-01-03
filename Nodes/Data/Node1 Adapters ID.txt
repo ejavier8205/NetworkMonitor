@@ -1,1 +1,2 @@
 "DESKTOP RACK 1","Intel(R) Ethernet Connection I218-LM","6C-C2-17-7F-F3-FD","\Device\Tcpip_{F1CBE5B3-9A76-45DD-8287-328B33405367}"
+"DESKTOP RACK 2","Realtek USB GbE Family Controller","70-88-6B-83-77-D3","\Device\Tcpip_{B4FA5CAE-19F4-4997-B458-6419CD9C71F5}"

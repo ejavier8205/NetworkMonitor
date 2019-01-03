@@ -52,12 +52,24 @@ function getCurrentTime()
 
     if(time == curHour + ":" + curMin + ":" + "30" + " " + suffix) {//Change this to whatever time you want
       
-      /** /http://192.168.2.68/networkmonitor/images/network.png **/
+       /** /http://192.168.2.68/networkmonitor/images/network.png **/
       
        /** location.reload();*/ 
-       if(navigator.onLine) { // true|false
-        location.reload();
-      }
+       var img = new Image();
+       var url = "images/network.png";
+              
+              img.src = url;
+
+              img.onload = function()
+              {
+                // If the server is up, do this.
+                location.reload();
+              }
+
+              img.onerror = function()
+              {
+                // If the server is down, do that.
+              }
         
     
   }

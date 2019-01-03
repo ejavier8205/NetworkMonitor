@@ -1,3 +1,4 @@
 "Ethernet","Intel(R) Ethernet Connection I218-LM","6C-C2-17-7F-F3-FD","\Device\Tcpip_{F1CBE5B3-9A76-45DD-8287-328B33405367}"
 "Wi-Fi","Intel(R) Dual Band Wireless-AC 7260","A0-A8-CD-88-C5-25","\Device\Tcpip_{615B26F8-AAB7-4713-8AEE-C2D34E8634B1}"
 "Bluetooth Network Connection","Bluetooth Device (Personal Area Network)","A0-A8-CD-88-C5-29","Media disconnected"
+"Ethernet 2","Realtek USB GbE Family Controller","70-88-6B-83-77-D3","\Device\Tcpip_{B4FA5CAE-19F4-4997-B458-6419CD9C71F5}"

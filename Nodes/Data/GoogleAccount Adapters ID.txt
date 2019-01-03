@@ -1,3 +1,0 @@
-"Bench 1","Realtek USB GbE Family Controller #3","70-88-6B-83-77-D3","\Device\Tcpip_{11C51347-C2F6-4B88-9F03-25454075B9AA}"
-"Bench 2","Realtek USB GbE Family Controller","70-88-6B-83-72-06","\Device\Tcpip_{74FE5A1A-F86C-4CB4-8A3B-FF0244B2B9CE}"
-"Bench 3","Realtek USB GbE Family Controller #2","70-88-6B-83-75-23","\Device\Tcpip_{BC1CD036-2500-4AA3-9AC8-FBAC9A4DEBFE}"

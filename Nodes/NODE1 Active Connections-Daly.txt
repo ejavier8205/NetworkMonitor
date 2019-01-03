@@ -1,3 +1,0 @@
-Bench 1,Bench 1,70-88-6B-83-77-D3
-Bench 2,Bench 2,70-88-6B-83-72-06
-Bench 3,Ethernet 3,70-88-6B-83-75-23

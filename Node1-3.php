@@ -27,7 +27,7 @@ echo "<div class=\"nodeContainer\">";
 			list($customer, $stationName, $ipAddress, $statusDate, $statusTime) = explode(",", $data);
 
 			if($stationName == "DESKTOP RACK 1") {echo "<div class=\"stationContainer\"><p class=\"stationName\">$stationName<p class=\"customerName\">$customer</p></div>\n";}
-			if($stationName == "RACK 2") {echo "<div class=\"stationContainer\"><p class=\"stationName\">$stationName<p class=\"customerName\">$customer</p></div>\n";}
+			if($stationName == "DESKTOP RACK 2") {echo "<div class=\"stationContainer\"><p class=\"stationName\">$stationName<p class=\"customerName\">$customer</p></div>\n";}
 			if($stationName == "RACK 3") {echo "<div class=\"stationContainer\"><p class=\"stationName\">$stationName<p class=\"customerName\">$customer</p></div>\n";}
 			}
 

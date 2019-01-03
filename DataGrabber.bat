@@ -107,7 +107,7 @@ Set "CurrentTime=!CurrentTime:~6,-3!"
 echo !CurrentTime!
 
 if '!CurrentTime!' EQU '15' (
-    xcopy "%HomeDirectory%Nodes\status\%computername%-Status.txt" "!serverPath!" /y
+    xcopy "%HomeDirectory%Nodes\status\%computername%-Status.txt" "%HomeDirectory%Nodes\AllNodesCompilation\" /y
     echo data sent
     goto :start 
 ) else (

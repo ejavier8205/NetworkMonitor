@@ -1,2 +1,0 @@
-"Wi-Fi","Intel(R) Dual Band Wireless-AC 8260","F0-D5-BF-07-84-E7","\Device\Tcpip_{E4B91A98-AC48-44F4-866B-7207AC833CFA}"
-"Bluetooth Network Connection","Bluetooth Device (Personal Area Network)","F0-D5-BF-07-84-EB","Media disconnected"
